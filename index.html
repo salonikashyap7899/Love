@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Letter with Fire Animation</title>
+    <style>
+      body {
+        background-color: black;
+        overflow: hidden;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: left;
+      }
+
+      .letter {
+        position: relative;
+        font-size: 10rem;
+        color: #f00;
+        text-shadow: 0 0 50px #f00;
+      }
+
+      .letter:before {
+        content: "LOVE YOUR SELf ❤ 😍 💖";
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0.5;
+      }
+
+      .letter:after {
+        content: "LOVE YOUR SELf ❤ 😍 💖";
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0.2;
+      }
+
+      .letter:before,
+      .letter:after {
+        animation: fire 1s ease-in-out infinite;
+      }
+
+      /* Extra Small Devices, Phones */
+      @media only screen and (min-width: 480px) {
+        body {
+          background-color: aqua;
+          display: grid;
+          flex-direction: row;
+          font-size: 10px;
+        }
+      }
+
+      /* Small Devices, Tablets */
+      @media only screen and (min-width: 768px) {
+        body {
+          background-color: black;
+          display: grid;
+          flex-direction: column;
+        }
+      }
+
+      /* Medium Devices, Desktops */
+      @media only screen and (min-width: 992px) {
+        body {
+          background-color: blue;
+          display: flex;
+          flex-direction: column;
+        }
+      }
+
+      /* Large Devices, Wide Screens */
+      @media only screen and (min-width: 1200px) {
+        body {
+          background-color: teal;
+          display: flex;
+          flex-wrap: wrap-reverse;
+        }
+      }
+
+      @keyframes fire {
+        0% {
+          transform: scale(1);
+          opacity: 0.5;
+        }
+        50% {
+          transform: scale(1.2);
+          opacity: 0.2;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 0.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="letter">LOVE YOUR SELf ❤ 😍 💖</div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
